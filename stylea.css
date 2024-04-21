@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+body{
+    text-align: center;
+    margin-left: 10%; 
+    margin-right: 10%; 
+    background-color: #c6c6c6;
+    color: #3d4044;
+    justify-content: center;
+    align-items: center;
+}
+
+body::before,
+body::after {
+  content: "";
+  display: block;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  width: 10%;  /* 留白宽度 */
+}
+
+body::before {
+  left: 0;
+  background-color: rgba(241, 217, 198, 1);  /* 左侧留白颜色 */
+}
+
+body::after {
+  right: 0;
+  background-color: rgba(241, 217, 198, 1);  /* 右侧留白颜色*/
+}
+
+nav {
+    background-color: #3d4044;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10% 0 10%;
+  }
+
+  nav a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+  nav a:hover {
+    background-color: #beb8ab;
+    color: black;
+  }
+
+.content{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto; 
+}
+
+h2{
+    margin: 0 auto; 
+    padding-bottom: 40px;
+    padding-top: 40px;
+}
+
+.avater{
+    text-align: center;
+    margin: 0 auto;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+img{
+    text-align: center;
+    max-width: 100%; /* 使图像保持其原始宽度比例 */
+    height: auto;
+}
+
+p{
+    text-align: left;
+    margin: 10%;
+    margin-top: 40px;
+
+}
+
+@media screen and (max-width: 800px) {
+
+    body {
+        margin: 0;
+    }
+
+    body::before,
+    body::after {
+        content: none; 
+    }
+}

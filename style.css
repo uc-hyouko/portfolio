@@ -1,0 +1,183 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    margin-left: 10%; 
+    margin-right: 10%; 
+    background-color: #c6c6c6;
+    color: #3d4044;
+}
+
+
+
+body::before,
+body::after {
+  content: "";
+  display: block;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  width: 10%;  /* 留白宽度 */
+}
+
+body::before {
+  left: 0;
+  background-color: rgba(241, 217, 198, 1);  /* 左侧留白颜色*/
+}
+
+body::after {
+  right: 0;
+  background-color: rgba(241, 217, 198, 1);  /* 右侧留白颜色*/
+}
+
+#header{
+    font-family: 'Montserrat', sans-serif;
+    color: #3d4044;
+    text-align: left;
+    margin-left: 20px;
+}
+
+nav {
+    position: fixed;
+    font-size: xx-large;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    gap: 20px;
+}
+
+nav a {
+    color: #333;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+nav a::before {
+    content: '\25B6'; /* Unicode字符，可以替换为其他播放符号 */
+    margin-right: 5px; /* 调整播放符号和文本之间的距离 */
+}
+
+.circle img{
+    width: 180px;
+    height: 180px;
+}
+
+.circle {
+    position: fixed;
+    top: 43%;
+    left: 65%;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.circle-avatar:hover img {
+    content: url('/images/smile.gif');
+}
+
+.circle-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.content {
+    padding: 20px;
+    text-align: center;
+}
+
+@media screen and (max-width: 800px) {
+    body{
+        margin-left: 10%; 
+        margin-right: 10%; 
+        background-color: #c6c6c6;
+        color: #3d4044;
+    }
+    
+    body::before,
+    body::after {
+      content: "";
+      display: block;
+      height: 100%;
+      position: fixed;
+      top: 0;
+      width: 10%;  /* 留白宽度 */
+    }
+    
+    body::before {
+      left: 0;
+      background-color: rgb(65, 56, 50, 0);  /* 左侧留白颜色*/
+    }
+    
+    body::after {
+      right: 0;
+      background-color: rgba(241, 217, 198, 0);  /* 右侧留白颜色*/
+    }
+    
+    #header{
+        font-family: 'Montserrat', sans-serif;
+        color: #3d4044;
+        text-align: center;
+        /* margin-left: 20px; */
+    }
+    
+    nav {
+        position: fixed;
+        font-size: xx-large;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; 
+        gap: 20px;
+    }
+    
+    nav a {
+        color: #333;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+    }
+    
+    nav a::before {
+        content: '\25B6'; /* Unicode字符，可以替换为其他播放符号 */
+        margin-right: 5px; /* 调整播放符号和文本之间的距离 */
+    }
+    
+    .circle img{
+        width: 180px;
+        height: 180px;
+    }
+    
+    .circle {
+        position: fixed;
+        top: 25%;  /* 垂直方向上居中 */
+        left: 50%;  /* 水平方向上居中 */
+        transform: translate(-50%, -50%);  /* 使用transform属性进行居中调整 */
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+
+    .circle-avatar:hover img {
+        content: url('/images/smile.gif');
+    }
+    
+    .circle-avatar img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+}
